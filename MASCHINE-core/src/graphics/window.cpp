@@ -46,7 +46,7 @@ namespace MASCHINE { namespace graphics {
 
 	bool Window::closed() const
 	{
-		return (bool)(glfwWindowShouldClose(m_Window));
+		return glfwWindowShouldClose(m_Window);
 	}
 
 	void Window::clear() const
