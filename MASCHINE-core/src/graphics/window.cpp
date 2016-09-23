@@ -39,14 +39,23 @@ namespace MASCHINE { namespace graphics {
 			std::cout << "Failed to create GLFW window!" << std::endl;
 			return false;
 		}
-		glfwMakeContextCurrent(m_Window);
+		glfwMakeContextCurrent(m_Window);			//Establish context before initializing GLEW
 		glfwSetWindowSizeCallback(m_Window, windowResize);
+
+		if (glewInit() != GLEW_OK)
+		{
+			std::cout << "Could not initialize GLEW" << std::endl;
+			return false;
+		}
+
+		std::cout << "OpenGL"  << glGetString(GL_VERSION) << std::endl;
+
 		return true;
 	}
 
 	bool Window::closed() const
 	{
-		return (bool)(glfwWindowShouldClose(m_Window));
+		return glfwWindowShouldClose(m_Window);
 	}
 
 	void Window::clear() const
