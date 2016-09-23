@@ -1,6 +1,7 @@
 #ifndef __WINDOW_H_
 #define __WINDOW_H_
 
+#include <GL\glew.h>		//requires GLEW_STATIC preprocessor flag, include before GLFW
 #include <GLFW\glfw3.h>
 #include <iostream>
 
