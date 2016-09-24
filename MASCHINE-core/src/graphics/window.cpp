@@ -43,6 +43,7 @@ namespace MASCHINE { namespace graphics {
 			std::cout << "Failed to create GLFW window!" << std::endl;
 			return false;
 		}
+		
 		glfwMakeContextCurrent(m_Window);			//Establish context before initializing GLEW
 		glfwSetWindowUserPointer(m_Window, this);
 		glfwSetWindowSizeCallback(m_Window, window_resize);
