@@ -16,6 +16,12 @@ int main()
 	while (!window.closed())
 	{
 		window.clear();
+		if (window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
+			std::cout << "Key pressed" << std::endl;
+		double x, y;
+		window.getMousePosition(x, y);
+		std::cout << x << ", " << y << std::endl;
+
 #if 1
 		glBegin(GL_QUADS);						//draw basic rectangle
 		glVertex2f(0.5f, 0.5f);
