@@ -1,7 +1,5 @@
 #include "vec2.h"
 
-//28:21
-
 namespace MASCHINE { namespace maths {
 
 	vec2::vec2()
@@ -68,22 +66,22 @@ namespace MASCHINE { namespace maths {
 		return divide(other);
 	}
 
-	vec2& operator+(vec2& left, const vec2& right)
+	vec2 operator+(vec2 left, const vec2& right)
 	{
 		return left.add(right);
 	}
 
-	vec2& operator-(vec2& left, const vec2& right)
+	vec2 operator-(vec2 left, const vec2& right)
 	{
 		return left.subtract(right);
 	}
 
-	vec2& operator*(vec2& left, const vec2& right)
+	vec2 operator*(vec2 left, const vec2& right)
 	{
 		return left.multiply(right);
 	}
 
-	vec2& operator/(vec2& left, const vec2& right)
+	vec2 operator/(vec2 left, const vec2& right)
 	{
 		return left.divide(right);
 	}
@@ -92,6 +90,16 @@ namespace MASCHINE { namespace maths {
 	{
 		stream << "vec2: (" << vector.x << ", " << vector.y << ")";
 		return stream;
+	}
+
+	bool vec2::operator==(const vec2& other)
+	{
+		return x == other.x && y == other.y;
+	}
+
+	bool vec2::operator!=(const vec2& other)
+	{
+		return !(*this==other);
 	}
 
 } }
