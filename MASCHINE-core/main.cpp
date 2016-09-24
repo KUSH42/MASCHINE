@@ -1,9 +1,11 @@
 #include "src/graphics/window.h"
+#include "src/maths/vec2.h"
 
 int main()
 {
 	using namespace MASCHINE;
 	using namespace graphics;
+	using namespace maths;
 
 	Window window("MASCHINE", 1440, 900);
 	glClearColor(0.2f, 0.3f, 0.9f, 1.0f);
@@ -12,6 +14,7 @@ int main()
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
+	vec2 vector(1.0f, 2.0f);
 
 	while (!window.closed())
 	{
