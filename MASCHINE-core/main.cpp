@@ -25,10 +25,12 @@ int main()
 	vec3 vy = vectorc + vectord;
 	vec4 vz = vectore + vectorf;
 
+	vy = vectorc+vectord;
 
-	std::cout << vector << std::endl;
+
+	std::cout << vy << std::endl;
 	std::cout << vectorc << std::endl;
-	std::cout << vectore << std::endl;
+	std::cout << vectord << std::endl;
 
 	while (!window.closed())
 	{
