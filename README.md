@@ -1,5 +1,5 @@
 # MASCHINE
 
-Basic C++ 2D graphics engine
+Basic C++ graphics engine
 
 WIP
