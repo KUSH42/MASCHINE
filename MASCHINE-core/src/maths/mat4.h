@@ -7,7 +7,11 @@ namespace MASCHINE { namespace maths {
 
 	struct mat4
 	{
-		float elements[4 * 4];
+		union
+		{
+			float elements[4 * 4];
+			vec4 columns[4];
+		};
 
 		mat4();
 		mat4(float diagonal);
@@ -26,6 +30,6 @@ namespace MASCHINE { namespace maths {
 		static mat4 rotation(float angle, const vec3& axis);
 	};
 
-	} }
+} }
 
 #endif // !__MAT_4_H_

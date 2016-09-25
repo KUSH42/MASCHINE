@@ -128,7 +128,6 @@ namespace MASCHINE { namespace maths {
 		result.elements[1 + 1 * 4] = y * omc + c;
 		result.elements[2 + 1 * 4] = y * z * omc + x * s;
 
-
 		result.elements[0 + 2 * 4] = x * z * omc + y * s;
 		result.elements[1 + 2 * 4] = y * z * omc - x * s;
 		result.elements[2 + 2 * 4] = z * omc + c;
